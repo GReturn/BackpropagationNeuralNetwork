@@ -1,4 +1,6 @@
-namespace BackpropagationNeuralNetwork.Nodes;
+using BackpropagationNeuralNetwork.Nodes;
+
+namespace BackpropagationNeuralNetwork;
 
 public class NeuralNet
 {
