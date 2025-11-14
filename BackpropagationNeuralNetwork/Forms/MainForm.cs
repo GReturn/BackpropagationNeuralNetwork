@@ -1,4 +1,4 @@
-namespace BackpropagationNeuralNetwork;
+namespace BackpropagationNeuralNetwork.Forms;
 
 public partial class MainForm : Form
 {
@@ -50,6 +50,8 @@ public partial class MainForm : Form
 
     private void btnGoToAND_Click(object sender, EventArgs e)
     {
-
+        var andForm = new AndGateForm(this);
+        andForm.Show();
+        Hide();
     }
 }

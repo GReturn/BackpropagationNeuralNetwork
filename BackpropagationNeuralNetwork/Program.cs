@@ -1,3 +1,5 @@
+using BackpropagationNeuralNetwork.Forms;
+
 namespace BackpropagationNeuralNetwork
 {
     internal static class Program
