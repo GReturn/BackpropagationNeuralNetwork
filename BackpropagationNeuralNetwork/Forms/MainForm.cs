@@ -16,6 +16,12 @@ public partial class MainForm : Form
 
     private void btnTrainNetwork_Click(object sender, EventArgs e)
     {
+        if (neuralNet is null)
+        {
+            MessageBox.Show("Please create the neural network first.");
+            return;
+        }
+
         for (int x = 0; x < 100; x++)
         {
             neuralNet.setInputs(0, 0.0);
@@ -42,6 +48,12 @@ public partial class MainForm : Form
 
     private void btnTest_Click(object sender, EventArgs e)
     {
+        if (neuralNet is null)
+        {
+            MessageBox.Show("Please create the neural network first.");
+            return;
+        }
+
         neuralNet.setInputs(0, Convert.ToDouble(textBoxInput0.Text));
         neuralNet.setInputs(1, Convert.ToDouble(textBoxInput1.Text));
         neuralNet.run();

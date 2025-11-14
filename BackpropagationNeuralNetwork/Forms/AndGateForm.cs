@@ -19,12 +19,18 @@ public partial class AndGateForm : Form
 
     private void btnCreateBPNN_Click(Object sender, EventArgs e)
     {
-        neuralNet = new NeuralNet(4, 100, 1);
+        neuralNet = new NeuralNet(4, 0, 1);
     }
 
     private void btnTrainNetwork_Click(object sender, EventArgs e)
     {
-        for (int x = 0; x < 100; x++)
+        if (neuralNet is null)
+        {
+            MessageBox.Show("Please create the neural network first.");
+            return;
+        }
+
+        for (int x = 0; x < 1; x++)
         {
             neuralNet.setInputs(0, 0.0);
             neuralNet.setInputs(1, 0.0);
@@ -147,8 +153,16 @@ public partial class AndGateForm : Form
 
     private void btnTest_Click(object sender, EventArgs e)
     {
+        if (neuralNet is null)
+        {
+            MessageBox.Show("Please create the neural network first.");
+            return;
+        }
+
         neuralNet.setInputs(0, Convert.ToDouble(textBoxInput0.Text));
         neuralNet.setInputs(1, Convert.ToDouble(textBoxInput1.Text));
+        neuralNet.setInputs(2, Convert.ToDouble(textBoxInput2.Text));
+        neuralNet.setInputs(3, Convert.ToDouble(textBoxInput3.Text));
         neuralNet.run();
         textBoxOutput0.Text = "" + neuralNet.getOuputData(0);
     }
