@@ -37,6 +37,10 @@ partial class AndGateForm
         textBoxInput2 = new TextBox();
         textBoxInput3 = new TextBox();
         textBoxOutput0 = new TextBox();
+        lblEpoch = new Label();
+        label1 = new Label();
+        label2 = new Label();
+        lblHiddenLayers = new Label();
         SuspendLayout();
         // 
         // btnGoBack
@@ -81,24 +85,24 @@ partial class AndGateForm
         // 
         // textBoxInput0
         // 
-        this.textBoxInput0.Location = new Point(168, 86);
-        this.textBoxInput0.Name = "textBoxInput0";
-        this.textBoxInput0.Size = new Size(100, 23);
-        this.textBoxInput0.TabIndex = 7;
+        textBoxInput0.Location = new Point(168, 86);
+        textBoxInput0.Name = "textBoxInput0";
+        textBoxInput0.Size = new Size(100, 23);
+        textBoxInput0.TabIndex = 7;
         // 
         // textBoxInput1
         // 
-        this.textBoxInput1.Location = new Point(168, 142);
-        this.textBoxInput1.Name = "textBoxInput1";
-        this.textBoxInput1.Size = new Size(100, 23);
-        this.textBoxInput1.TabIndex = 8;
+        textBoxInput1.Location = new Point(168, 142);
+        textBoxInput1.Name = "textBoxInput1";
+        textBoxInput1.Size = new Size(100, 23);
+        textBoxInput1.TabIndex = 8;
         // 
         // textBoxInput2
         // 
-        this.textBoxInput2.Location = new Point(168, 205);
-        this.textBoxInput2.Name = "textBoxInput2";
-        this.textBoxInput2.Size = new Size(100, 23);
-        this.textBoxInput2.TabIndex = 9;
+        textBoxInput2.Location = new Point(168, 205);
+        textBoxInput2.Name = "textBoxInput2";
+        textBoxInput2.Size = new Size(100, 23);
+        textBoxInput2.TabIndex = 9;
         // 
         // textBoxInput3
         // 
@@ -114,16 +118,56 @@ partial class AndGateForm
         textBoxOutput0.Size = new Size(100, 23);
         textBoxOutput0.TabIndex = 11;
         // 
+        // lblEpoch
+        // 
+        lblEpoch.AutoSize = true;
+        lblEpoch.Location = new Point(52, 406);
+        lblEpoch.Name = "lblEpoch";
+        lblEpoch.Size = new Size(13, 15);
+        lblEpoch.TabIndex = 12;
+        lblEpoch.Text = "0";
+        // 
+        // label1
+        // 
+        label1.AutoSize = true;
+        label1.Location = new Point(12, 406);
+        label1.Name = "label1";
+        label1.Size = new Size(43, 15);
+        label1.TabIndex = 13;
+        label1.Text = "Epoch:";
+        // 
+        // label2
+        // 
+        label2.AutoSize = true;
+        label2.Location = new Point(12, 426);
+        label2.Name = "label2";
+        label2.Size = new Size(85, 15);
+        label2.TabIndex = 14;
+        label2.Text = "Hidden Layers:";
+        // 
+        // lblHiddenLayers
+        // 
+        lblHiddenLayers.AutoSize = true;
+        lblHiddenLayers.Location = new Point(94, 426);
+        lblHiddenLayers.Name = "lblHiddenLayers";
+        lblHiddenLayers.Size = new Size(13, 15);
+        lblHiddenLayers.TabIndex = 15;
+        lblHiddenLayers.Text = "0";
+        // 
         // AndGateForm
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
+        Controls.Add(lblHiddenLayers);
+        Controls.Add(label2);
+        Controls.Add(label1);
+        Controls.Add(lblEpoch);
         Controls.Add(textBoxOutput0);
         Controls.Add(textBoxInput3);
-        Controls.Add(this.textBoxInput2);
-        Controls.Add(this.textBoxInput1);
-        Controls.Add(this.textBoxInput0);
+        Controls.Add(textBoxInput2);
+        Controls.Add(textBoxInput1);
+        Controls.Add(textBoxInput0);
         Controls.Add(btnTest);
         Controls.Add(btnTrainNetwork);
         Controls.Add(btnCreateBPNN);
@@ -144,4 +188,8 @@ partial class AndGateForm
     private TextBox textBoxInput2;
     private TextBox textBoxInput3;
     private TextBox textBoxOutput0;
+    private Label lblEpoch;
+    private Label label1;
+    private Label label2;
+    private Label lblHiddenLayers;
 }
