@@ -19,7 +19,9 @@ public partial class AndGateForm : Form
 
     private void btnCreateBPNN_Click(Object sender, EventArgs e)
     {
-        neuralNet = new NeuralNet(4, 0, 1);
+        const int hiddenNeurons = 16;
+        lblHiddenLayers.Text = Convert.ToString(hiddenNeurons);
+        neuralNet = new NeuralNet(4, hiddenNeurons, 1);
     }
 
     private void btnTrainNetwork_Click(object sender, EventArgs e)
@@ -30,7 +32,12 @@ public partial class AndGateForm : Form
             return;
         }
 
-        for (int x = 0; x < 1; x++)
+        //long epoch = 0;
+        //double totalError = 1.0;
+        //for (; totalError > 0.001 && epoch < 10_000; epoch++)
+        int runEpoch = 100;
+        lblEpoch.Text = Convert.ToInt32(lblEpoch.Text) + runEpoch + ""; 
+        for (int x = 0; x < runEpoch; x++)
         {
             neuralNet.setInputs(0, 0.0);
             neuralNet.setInputs(1, 0.0);
