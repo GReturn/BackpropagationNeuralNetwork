@@ -39,6 +39,8 @@ public partial class AndGateForm : Form
         lblEpoch.Text = Convert.ToInt32(lblEpoch.Text) + runEpoch + ""; 
         for (int x = 0; x < runEpoch; x++)
         {
+            //totalError = 0;
+
             neuralNet.setInputs(0, 0.0);
             neuralNet.setInputs(1, 0.0);
             neuralNet.setInputs(2, 0.0);
@@ -46,8 +48,7 @@ public partial class AndGateForm : Form
             neuralNet.setDesiredOutput(0, 0.0);
             neuralNet.learn();
 
-
-
+            #region 1 TRUE
             neuralNet.setInputs(0, 1.0);
             neuralNet.setInputs(1, 0.0);
             neuralNet.setInputs(2, 0.0);
@@ -58,7 +59,7 @@ public partial class AndGateForm : Form
             neuralNet.setInputs(0, 0.0);
             neuralNet.setInputs(1, 1.0);
             neuralNet.setInputs(2, 0.0);
-            neuralNet.setInputs(3, 0.0); 
+            neuralNet.setInputs(3, 0.0);
             neuralNet.setDesiredOutput(0, 0.0);
             neuralNet.learn();
 
@@ -75,9 +76,9 @@ public partial class AndGateForm : Form
             neuralNet.setInputs(3, 1.0);
             neuralNet.setDesiredOutput(0, 0.0);
             neuralNet.learn();
+            #endregion
 
-
-
+            #region 2 TRUES
             neuralNet.setInputs(0, 1.0);
             neuralNet.setInputs(1, 1.0);
             neuralNet.setInputs(2, 0.0);
@@ -118,9 +119,9 @@ public partial class AndGateForm : Form
             neuralNet.setInputs(3, 1.0);
             neuralNet.setDesiredOutput(0, 0.0);
             neuralNet.learn();
+            #endregion
 
-
-
+            #region 3 TRUES
             neuralNet.setInputs(0, 1.0);
             neuralNet.setInputs(1, 1.0);
             neuralNet.setInputs(2, 1.0);
@@ -148,7 +149,7 @@ public partial class AndGateForm : Form
             neuralNet.setDesiredOutput(0, 0.0);
             neuralNet.learn();
 
-
+            #endregion
 
             neuralNet.setInputs(0, 1.0);
             neuralNet.setInputs(1, 1.0);
