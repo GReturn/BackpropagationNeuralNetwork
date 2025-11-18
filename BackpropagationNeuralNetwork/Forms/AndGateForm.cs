@@ -148,6 +148,7 @@ public partial class AndGateForm : Form
             neuralNet.setInputs(2, 1.0);
             neuralNet.setInputs(3, 1.0);
             neuralNet.setDesiredOutput(0, 1.0);
+            neuralNet.learn();
         }
     }
 
