@@ -33,15 +33,10 @@ public partial class AndGateForm : Form
             return;
         }
 
-        //long epoch = 0;
-        //double totalError = 1.0;
-        //for (; totalError > 0.001 && epoch < 10_000; epoch++)
         int runEpoch = 100;
         lblEpoch.Text = Convert.ToInt32(lblEpoch.Text) + runEpoch + ""; 
         for (int x = 0; x < runEpoch; x++)
         {
-            //totalError = 0;
-
             neuralNet.setInputs(0, 0.0);
             neuralNet.setInputs(1, 0.0);
             neuralNet.setInputs(2, 0.0);
