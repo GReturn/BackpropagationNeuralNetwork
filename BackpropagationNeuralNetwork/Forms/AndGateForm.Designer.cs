@@ -115,7 +115,7 @@ partial class AndGateForm
         // 
         textBoxOutput0.Location = new Point(477, 171);
         textBoxOutput0.Name = "textBoxOutput0";
-        textBoxOutput0.Size = new Size(100, 23);
+        textBoxOutput0.Size = new Size(221, 23);
         textBoxOutput0.TabIndex = 11;
         // 
         // lblEpoch
@@ -141,14 +141,14 @@ partial class AndGateForm
         label2.AutoSize = true;
         label2.Location = new Point(12, 426);
         label2.Name = "label2";
-        label2.Size = new Size(85, 15);
+        label2.Size = new Size(97, 15);
         label2.TabIndex = 14;
-        label2.Text = "Hidden Layers:";
+        label2.Text = "Hidden Neurons:";
         // 
         // lblHiddenLayers
         // 
         lblHiddenLayers.AutoSize = true;
-        lblHiddenLayers.Location = new Point(94, 426);
+        lblHiddenLayers.Location = new Point(106, 426);
         lblHiddenLayers.Name = "lblHiddenLayers";
         lblHiddenLayers.Size = new Size(13, 15);
         lblHiddenLayers.TabIndex = 15;
