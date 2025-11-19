@@ -19,7 +19,7 @@ public partial class AndGateForm : Form
 
     private void btnCreateBPNN_Click(Object sender, EventArgs e)
     {
-        const int hiddenNeurons = 16;
+        const int hiddenNeurons = 1;
         lblEpoch.Text = "0";
         lblHiddenLayers.Text = Convert.ToString(hiddenNeurons);
         neuralNet = new NeuralNet(4, hiddenNeurons, 1);
